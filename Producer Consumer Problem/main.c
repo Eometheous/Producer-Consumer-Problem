@@ -36,8 +36,6 @@ int main(int argc, const char * argv[]) {
     
     pthread_mutex_init(&mutex, NULL);
     
-    //sem_init(&empty, 0, 5); deprecated
-    //sem_init(&full, 0, 0); deprecated
     empty = dispatch_semaphore_create(BUFFER_SIZE);
     full = dispatch_semaphore_create(0);
     
